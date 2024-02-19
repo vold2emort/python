@@ -28,7 +28,7 @@ def choose_difficulty():
 
 def play_game():
     answer = randint(1, 100)
-    print(answer)
+    
     print(logo)
     print("WELCOME TO NUMBER GUESSING GAME!")
     print("I am thinking a number between 1 and 100")
