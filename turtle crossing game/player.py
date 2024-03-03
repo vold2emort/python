@@ -18,3 +18,9 @@ class Player(Turtle):
 
     def restore_position(self):
         self.goto(STARTING_POSITION)
+
+    def is_at_finish(self):
+        if self.ycor() > FINISH_LINE_Y:
+            return True
+        else:
+            return False
