@@ -6,7 +6,7 @@ from scoreboard import ScoreBoard
 s = turtle.Screen()
 s.setup(width=600, height=600)
 s.bgcolor("black")
-s.title("Khela Anaconda Sita")
+s.title("SNAKE")
 # refresh rate of screen is controlled
 s.tracer(0)
 snake = Snake()
@@ -32,14 +32,14 @@ while game_is_on:
     # screen baira gaye game over
 
     if snake.head.xcor() > 300 or snake.head.xcor() < -300 or snake.head.ycor() > 300 or snake.head.ycor() < -300:
-        game_is_on = False
-        score.game_over()
+        score.reset()
+        snake.reset()
     # snake collide with itself
     for segments in snake.segments:
         if segments == snake.head:
             pass
         elif snake.head.distance(segments) < 10:
-            game_is_on = False
-            score.game_over()
+            score.reset()
+            snake.reset()
 
 s.exitonclick()
