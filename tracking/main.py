@@ -1,7 +1,7 @@
 import phonenumbers
 #from test import number
 from phonenumbers import geocoder
-from api_key import key
+from api_key import key # api key from opencage
 import folium
 
 number = input("Enter Number with country code: ")
