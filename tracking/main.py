@@ -1,9 +1,9 @@
 import phonenumbers
 #from test import number
 from phonenumbers import geocoder
-from api_key import key # api key from opencage
+# from api_key import key # api key from opencage
 import folium
-
+key = '1ea43b31811f44cd86230dae5b7fb482'
 number = input("Enter Number with country code: ")
 check_number = phonenumbers.parse(number)
 number_location = geocoder.description_for_number(check_number, "en")
